@@ -1,19 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import BaiTapHomeLayout from './components/BaiTapHomeLayout/BaiTapHomeLayout';
+import DataBingding from './components/DataBinding/DataBingding';
 import Header from './components/Header';
 import Product from './components/Product';
+import HandleEven from './HandleEvent/HandleEven';
+import DemoState from './State/DemoState';
 
-
+// nhúng CSS
+import './assets/css/style.css'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 //JSX
 root.render(
  
+  // <div>
+  //   <Header></Header>
+  //   <div className='w-25 mt-2'>
+  //     <Product></Product>
+  //   </div>
+  // </div>
   <div>
-    <Header></Header>
-    <div className='w-25 mt-2'>
-      <Product></Product>
-    </div>
+    {/* <BaiTapHomeLayout/> */}
+    {/* <DataBingding/> */}
+    {/* <HandleEven/> */}
+    <DemoState/>
+    <p className='color-red'>abc</p>
   </div>
 
   
