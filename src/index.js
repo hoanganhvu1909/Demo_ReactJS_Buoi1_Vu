@@ -6,9 +6,11 @@ import Header from './components/Header';
 import Product from './components/Product';
 import HandleEven from './HandleEvent/HandleEven';
 import DemoState from './State/DemoState';
-
+import RenderList from './RenderList/RenderList';
+import RenderFilm from './RenderList/RenderFilm';
 // nhúng CSS
 import './assets/css/style.css'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 //JSX
@@ -24,8 +26,10 @@ root.render(
     {/* <BaiTapHomeLayout/> */}
     {/* <DataBingding/> */}
     {/* <HandleEven/> */}
-    <DemoState/>
-    <p className='color-red'>abc</p>
+    {/* <DemoState/> */}
+    {/* <p className='color-red'>abc</p> */}
+    {/* <RenderList/> */}
+    <RenderFilm/>
   </div>
 
   
