@@ -10,6 +10,7 @@ import RenderList from './RenderList/RenderList';
 import RenderFilm from './RenderList/RenderFilm';
 // nhúng CSS
 import './assets/css/style.css'
+import DemoPros from './Pros/DemoPros';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -29,7 +30,8 @@ root.render(
     {/* <DemoState/> */}
     {/* <p className='color-red'>abc</p> */}
     {/* <RenderList/> */}
-    <RenderFilm/>
+    {/* <RenderFilm/> */}
+    <DemoPros/>
   </div>
 
   
