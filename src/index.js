@@ -11,6 +11,8 @@ import RenderFilm from './RenderList/RenderFilm';
 // nhúng CSS
 import './assets/css/style.css'
 import DemoPros from './Pros/DemoPros';
+import ShoesApp from './Pros/ShoesApp/ShoesApp';
+import BaiTapXemChiTiet from './State/BaiTapXemChiTiet/BaiTapXemChiTiet';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -31,7 +33,9 @@ root.render(
     {/* <p className='color-red'>abc</p> */}
     {/* <RenderList/> */}
     {/* <RenderFilm/> */}
-    <DemoPros/>
+    {/* <DemoPros/> */}
+    {/* <ShoesApp/> */}
+    <BaiTapXemChiTiet/>
   </div>
 
   
