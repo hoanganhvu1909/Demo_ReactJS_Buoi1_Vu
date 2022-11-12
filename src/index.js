@@ -17,12 +17,14 @@ import ExerciseCarStore from './Pros/ExerciseCarSore/ExerciseCarStore';
 import DemoChildrentprops from './Pros/DemoChildrenPros/DemoChildrentprops';
 
 // setup react router dom
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Detail from './pages/Detail';
 import Register from './pages/Register';
 import Hometemplates from './templates/Hometemplates';
+import Page404 from './pages/Page404';
+import FormCreateProduct from './pages/FormCreateProduct';
 
 
 
@@ -34,10 +36,18 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path='' element={<Hometemplates />}>
-        <Route path='Home' element={<Home />}></Route>
+        <Route index path='Home' element={<Home />}></Route>
         <Route path='Login' element={<Login />}></Route>
         <Route path='Detail' element={<Detail />}></Route>
         <Route path='Register' element={<Register />}></Route>
+        <Route path='Form' element={<FormCreateProduct />}></Route>
+        
+
+
+
+        <Route path='*' element={<Navigate to="" />}></Route>
+        
+        {/* <Route path='*' element={<Page404/>}></Route> */}
       </Route>
     </Routes>
 
