@@ -43,6 +43,11 @@ export default class Header extends Component {
                                 </div>
                             </li> */}
                         </ul>
+                        <div className='d-flex my-2 my-lg-0 '>
+                                <NavLink to={'/btgiohang'}>
+                            <i className='fa fa-cart-plus' style={{fontSize:20}}></i>
+                                </NavLink>
+                        </div>
                         
                     </div>
                 </div>
