@@ -8,21 +8,23 @@ const data = [
 ]
 export default class DanhSachSanPham extends Component {
   render() {
+    const {themGioHang} = this.props;
+
     return (
       <div>
-        <h3 className='mt-2 text-center'>Danh sách sản phẩm</h3>
-        <div className="row">
-          <div className="col-4">
-            <SanPham />
-          </div>
-          <div className="col-4">
-            <SanPham />
-          </div>
-          <div className="col-4">
-            <SanPham />
-          </div>
-        </div>
+      <h3 className='mt-2 text-center'>Danh sách sản phẩm</h3>
+      <div className='row'>
+          {
+              data.map((item, index) => {
+                  return <div className='col-4' key={index}>
+                      <SanPham prod={item} themGioHang={themGioHang}/>
+                  </div>
+              })
+          }
+
+
       </div>
+  </div>
     )
   }
 }
