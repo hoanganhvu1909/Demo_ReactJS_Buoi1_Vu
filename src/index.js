@@ -26,6 +26,7 @@ import Hometemplates from './templates/Hometemplates';
 import Page404 from './pages/Page404';
 import FormCreateProduct from './pages/FormCreateProduct';
 import BaiTapGioHang from './pages/BaiTapGioHang/BaiTapGioHang'
+import Lifecycle from './pages/Lifecycle/Lifecycle';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -42,7 +43,7 @@ root.render(
         <Route path='Register' element={<Register />}></Route>
         <Route path='Form' element={<FormCreateProduct />}></Route>
         <Route path='btgiohang' element={<BaiTapGioHang/>}></Route>
-
+        <Route path='lifecycle' element={<Lifecycle/>}></Route>
 
 
         <Route path='*' element={<Navigate to="" />}></Route>
