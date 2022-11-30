@@ -28,31 +28,41 @@ import FormCreateProduct from './pages/FormCreateProduct';
 import BaiTapGioHang from './pages/BaiTapGioHang/BaiTapGioHang'
 import Lifecycle from './pages/Lifecycle/Lifecycle';
 import Store from './pages/StoreApi/Store';
+// Setup redux store
+import { Provider } from 'react-redux'
+import { store } from './redux/configStore';
+import ReduxDemo from './ReduxDemo/ReduxDemo';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+
+
+
+
 //JSX
 root.render(
 
-  <BrowserRouter>
-    <Routes>
-      <Route path='' element={<Hometemplates />}>
-        <Route index path='Home' element={<Home />}></Route>
-        <Route path='Login' element={<Login />}></Route>
-        <Route path='Detail' element={<Detail />}></Route>
-        <Route path='Register' element={<Register />}></Route>
-        <Route path='Form' element={<FormCreateProduct />}></Route>
-        <Route path='btgiohang' element={<BaiTapGioHang/>}></Route>
-        <Route path='lifecycle' element={<Lifecycle/>}></Route>
-        <Route path='store' element={<Store/>}></Route>
+  <Provider store={store}>
+    <BrowserRouter>
+      <Routes>
+        <Route path='' element={<Hometemplates />}>
+          <Route index path='Home' element={<Home />}></Route>
+          <Route path='Login' element={<Login />}></Route>
+          <Route path='Detail' element={<Detail />}></Route>
+          <Route path='Register' element={<Register />}></Route>
+          <Route path='Form' element={<FormCreateProduct />}></Route>
+          <Route path='btgiohang' element={<BaiTapGioHang />}></Route>
+          <Route path='lifecycle' element={<Lifecycle />}></Route>
+          <Route path='store' element={<Store />}></Route>
+          <Route path='reduxdemo' element={<ReduxDemo />} ></Route>
 
-        <Route path='*' element={<Navigate to="" />}></Route>
-        
-        {/* <Route path='*' element={<Page404/>}></Route> */}
-      </Route>
-    </Routes>
+          <Route path='*' element={<Navigate to="" />}></Route>
 
-  </BrowserRouter>
+          {/* <Route path='*' element={<Page404/>}></Route> */}
+        </Route>
+      </Routes>
 
+    </BrowserRouter>
+  </Provider>
 )
