@@ -32,6 +32,7 @@ import Store from './pages/StoreApi/Store';
 import { Provider } from 'react-redux'
 import { store } from './redux/configStore';
 import ReduxDemo from './ReduxDemo/ReduxDemo';
+import BaiTapGameXucXac from './pages/BaiTaoGaneXucXac/BaiTapGameXucXac';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -56,6 +57,7 @@ root.render(
           <Route path='lifecycle' element={<Lifecycle />}></Route>
           <Route path='store' element={<Store />}></Route>
           <Route path='reduxdemo' element={<ReduxDemo />} ></Route>
+          <Route path='bt-game' element={<BaiTapGameXucXac/>}></Route>
 
           <Route path='*' element={<Navigate to="" />}></Route>
 

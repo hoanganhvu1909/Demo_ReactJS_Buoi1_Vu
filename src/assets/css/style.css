@@ -1,6 +1,6 @@
 
 .background-film{
-    background: url(./../../img/background/avanger.jpg);
+    background: url(./../img/background/avanger.jpg);
     background-size: cover;
     background-position: center;
     height: 100%;
