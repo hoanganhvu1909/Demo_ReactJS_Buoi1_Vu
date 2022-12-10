@@ -7,22 +7,28 @@ class KetQuaTroTroi extends Component {
 
 
     render() {
+        const {diemCuoc, soLanCuoc,soBanThang} = this.props
         return (
             <div className='text-center'>
                 <div className="display-4">
                     <span>Bạn đặt cược:</span>
-                    <span className='text-danger'>Tài</span>
+                    <span className='text-danger'>{diemCuoc?'Tài':'Xỉu'}</span>
                 </div>
                 <div className="display-4">
                     <span>Tổng số bàn thắng:</span>
-                    <span className='text-success'>10</span>
+                    <span className='text-success'>{soBanThang}</span>
                 </div>
                 <div className="display-4">
                     <span>Tổng số bàn cược:</span>
-                    <span className='text-warning'>10</span>
+                    <span className='text-warning'>{soLanCuoc}</span>
                 </div>
                 <div className="display-4">
-                    <button className='btn btn-success p-3'>Play Game</button>
+                    <button className='btn btn-success p-3' onClick={()=>{
+                        const action ={
+                            type: 'PLAY_GAME',
+                        }
+                        this.props.dispatch(action);
+                    }}>Play Game</button>
                 </div>
             </div>
         )
@@ -30,7 +36,9 @@ class KetQuaTroTroi extends Component {
 }
 
 const mapStateToProps = (state) => ({
-
+diemCuoc: state.baiTapGameReducer.diemCuoc,
+soLanCuoc: state.baiTapGameReducer.soLanCuoc,
+soBanThang:state.baiTapGameReducer.soBanThang
 })
 
 

@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import KetQuaTroTroi from './KetQuaTroTroi'
-import { XucXac } from './XucXac'
+import XucXac from './XucXac'
 import './BaiTapGameXucXac.css'
 
 class BaiTapGameXucXac extends Component {
@@ -12,7 +12,7 @@ class BaiTapGameXucXac extends Component {
         return (
             <div className='bg-game'>
                 <h3 className='display-4 text-center pt-5'>BÀI TẬP XÚC XẮC</h3>
-                <XucXac/>
+               <XucXac/>
                 <KetQuaTroTroi/>
             </div>
         )
