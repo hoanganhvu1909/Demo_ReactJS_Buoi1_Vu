@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 
 import { connect } from 'react-redux'
+import { datCuocAction } from '../../redux/action/baiTapGameAction';
 
 class XucXac extends Component {
     rendetKetQua = () => {
@@ -25,11 +26,12 @@ class XucXac extends Component {
                 <div className="row text-center pt-5">
                     <div className="col-4">
                         <button className='btn btn-danger' onClick={() => {
-                            // B1: Tạo ra object action
-                            const action = {
-                                type: 'DAT_CUOC',
-                                payload: true
-                            }
+                            // B1: Tạo ra object action(Cach1:Viết theo cách này thì bị lặp code vd: type: 'DAT_CUOC',)
+                            // const action = {
+                            //     type: 'DAT_CUOC',
+                            //     payload: true
+                            // }
+                            const action = datCuocAction(true)
                             // B2: Dùng this.props.dispatch gửi lên reducer
                             this.props.dispatch(action);
                         }}>
@@ -52,10 +54,7 @@ class XucXac extends Component {
                     <div className="col-4">
                         <button className='btn btn-danger' onClick={() => {
                             //B1: Tạo ra object action
-                            const action = {
-                                type: 'DAT_CUOC',
-                                payload: false
-                            }
+                            const action = datCuocAction(false)
                             //B2: Dùng this.props.dispatch gửi lên redux
                             this.props.dispatch(action);
                         }}>

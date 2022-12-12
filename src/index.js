@@ -33,6 +33,10 @@ import { Provider } from 'react-redux'
 import { store } from './redux/configStore';
 import ReduxDemo from './ReduxDemo/ReduxDemo';
 import BaiTapGameXucXac from './pages/BaiTaoGaneXucXac/BaiTapGameXucXac';
+import UseStateDemo from './pages/HookDemo/UseStateDemo';
+import UseEffectDemo from './pages/HookDemo/UseEffectDemo/UseEffectDemo';
+import DemoCategory from './pages/HookDemo/UseEffectDemo/DemoCategory';
+import UseCallBackDemo from './pages/HookDemo/UseCallBackDemo/UseCallBackDemo';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -58,6 +62,16 @@ root.render(
           <Route path='store' element={<Store />}></Route>
           <Route path='reduxdemo' element={<ReduxDemo />} ></Route>
           <Route path='bt-game' element={<BaiTapGameXucXac/>}></Route>
+          <Route path='hook-use-state' element={<UseStateDemo/>} ></Route>
+          <Route path='hook-use-effect' element={<UseEffectDemo/>}></Route>
+          <Route path='hook-use-effect-update' element={<DemoCategory/>}></Route>
+          <Route path='hook-use-callback' element={<UseCallBackDemo/>}></Route>
+
+
+
+
+
+
 
           <Route path='*' element={<Navigate to="" />}></Route>
 
