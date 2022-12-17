@@ -37,6 +37,11 @@ import UseStateDemo from './pages/HookDemo/UseStateDemo';
 import UseEffectDemo from './pages/HookDemo/UseEffectDemo/UseEffectDemo';
 import DemoCategory from './pages/HookDemo/UseEffectDemo/DemoCategory';
 import UseCallBackDemo from './pages/HookDemo/UseCallBackDemo/UseCallBackDemo';
+import UseMemoDemo from './pages/HookDemo/UseMemoDemo/UseMemoDemo';
+import UseRefDemo from './pages/HookDemo/UseRefDemo/UseRefDemo';
+import UseRedux from './pages/UseRedux/UseRedux';
+import DemoNavigate from './pages/HookRouter/DemoNavigate';
+import DemoUseparam from './pages/HookRouter/DemoUseparam';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -66,6 +71,12 @@ root.render(
           <Route path='hook-use-effect' element={<UseEffectDemo/>}></Route>
           <Route path='hook-use-effect-update' element={<DemoCategory/>}></Route>
           <Route path='hook-use-callback' element={<UseCallBackDemo/>}></Route>
+          <Route path='hook-use-memo' element={<UseMemoDemo/>}></Route>
+          <Route path='hook-use-ref' element={<UseRefDemo/>}></Route>
+          <Route path='hook-use-redux' element={<UseRedux/>}></Route>
+          <Route path='hook-use-navigate' element={<DemoNavigate/>}></Route>
+          <Route path='detail-params' ></Route>
+          <Route path=':id' element={<DemoUseparam/>}></Route>
 
 
 
