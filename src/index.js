@@ -42,6 +42,8 @@ import UseRefDemo from './pages/HookDemo/UseRefDemo/UseRefDemo';
 import UseRedux from './pages/UseRedux/UseRedux';
 import DemoNavigate from './pages/HookRouter/DemoNavigate';
 import DemoUseparam from './pages/HookRouter/DemoUseparam';
+import DemoUseSearchParams from './pages/HookRouter/DemoUseSearchParams';
+import DemoCustom from './pages/HookRouter/DemoCustom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -66,17 +68,21 @@ root.render(
           <Route path='lifecycle' element={<Lifecycle />}></Route>
           <Route path='store' element={<Store />}></Route>
           <Route path='reduxdemo' element={<ReduxDemo />} ></Route>
-          <Route path='bt-game' element={<BaiTapGameXucXac/>}></Route>
-          <Route path='hook-use-state' element={<UseStateDemo/>} ></Route>
-          <Route path='hook-use-effect' element={<UseEffectDemo/>}></Route>
-          <Route path='hook-use-effect-update' element={<DemoCategory/>}></Route>
-          <Route path='hook-use-callback' element={<UseCallBackDemo/>}></Route>
-          <Route path='hook-use-memo' element={<UseMemoDemo/>}></Route>
-          <Route path='hook-use-ref' element={<UseRefDemo/>}></Route>
-          <Route path='hook-use-redux' element={<UseRedux/>}></Route>
-          <Route path='hook-use-navigate' element={<DemoNavigate/>}></Route>
-          <Route path='detail-params' ></Route>
-          <Route path=':id' element={<DemoUseparam/>}></Route>
+          <Route path='bt-game' element={<BaiTapGameXucXac />}></Route>
+          <Route path='hook-use-state' element={<UseStateDemo />} ></Route>
+          <Route path='hook-use-effect' element={<UseEffectDemo />}></Route>
+          <Route path='hook-use-effect-update' element={<DemoCategory />}></Route>
+          <Route path='hook-use-callback' element={<UseCallBackDemo />}></Route>
+          <Route path='hook-use-memo' element={<UseMemoDemo />}></Route>
+          <Route path='hook-use-ref' element={<UseRefDemo />}></Route>
+          <Route path='hook-use-redux' element={<UseRedux />}></Route>
+          <Route path='hook-use-navigate' element={<DemoNavigate />}></Route>
+          <Route path='detail-params' >
+            <Route path=':id' element={<DemoUseparam />}></Route>
+          </Route>
+          <Route path='hook-use-search-params' element={<DemoUseSearchParams/>}></Route>
+          <Route path='demo-custom-hook' element={<DemoCustom/>}></Route>
+
 
 
 

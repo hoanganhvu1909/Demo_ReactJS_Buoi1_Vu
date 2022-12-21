@@ -58,7 +58,8 @@ export default class Header extends Component {
                                 <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hooks Router</a>
                                 <div className="dropdown-menu" aria-labelledby="dropdownId">
                                     <NavLink className="dropdown-item" to="/hook-use-navigate">useNavigate</NavLink>
-                                    
+                                    <NavLink className="dropdown-item" to="/hook-use-search-params">Search</NavLink>
+                                    <NavLink className="dropdown-item" to="/demo-custom-hook">Custom Hook</NavLink>
                                 </div>
                             </li>
 
@@ -84,3 +85,5 @@ export default class Header extends Component {
         )
     }
 }
+
+

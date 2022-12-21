@@ -3,9 +3,16 @@ import React, { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
 import {useFormik} from 'formik'
 import * as yup from 'yup'
+import useRoute from '../../hooks/useRoute';
 const DemoNavigate = () => {
+    // Cách truyền thống
     // useNavigate: dùng để điều hướng trang
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
+
+    // Cách sử dụng custom hooks
+     const {params,navigate} = useRoute()
+
+
     const formLogin = useFormik({
         initialValues:({
             email:'',
